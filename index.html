@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="overlay">
+        <div id="prompt">
+            <p>Please enter your age:</p>
+            <input type="number" id="age" placeholder="Input age">
+            <button onclick="submitAge()">Submit</button>
+            <p id="ageError" style="color: red;"></p>
+        </div>
+        <div id="namePrompt" style="display: none;">
+            <p>Please enter your name:</p>
+            <input type="text" id="name" placeholder="Input name">
+            <button onclick="submitName()">Submit</button>
+        </div>
+    </div>
+
+    <div id="gameContainer" style="display: none;">
+        <h1 id="welcomeMessage">Welcome to Tetris</h1>
+        <div id="gameArea">
+            <div id="countdown" style="display: none;">5</div>
+            <canvas id="tetrisCanvas" width="300" height="600"></canvas>
+            <div id="scoreArea">
+                <p>Score: <span id="score">0</span></p>
+                <p>Next Tetromino:</p>
+                <canvas id="nextCanvas" width="100" height="100"></canvas>
+                <div id="controlPanel">
+                    <button id="pauseButton">Pause</button>
+                    <button id="resumeButton" style="display: none;">Resume</button>
+                    <button id="restartButton">Restart</button>
+                    <button id="quitButton">Quit</button>
+                    <button id="instructionsButton">Instructions</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="instructions" style="display: none;">
+        <h2>Game Instructions</h2>
+        <p>Use arrow keys to move and space to rotate. Click on the grid to rotate.</p>
+        <button id="closeInstructionsButton">Close</button>
+    </div>
+
+    <div id="winMessage" style="display: none;">
+        <h2>You Have WON Tetris!</h2>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
